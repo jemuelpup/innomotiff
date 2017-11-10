@@ -56,12 +56,18 @@
 			</ul>
 		</div>
 	</header>
-	<aside>
+	<aside class="active">
 		<!-- this contains the navigations -->
 		<nav>
 			<div class="container">
-				<h1 class="left z-depth-5"><img src="/images/logo.png" alt=""></h1>
-				<ul class="right">
+				<div class="sp-menu z-depth-1">
+					<h1 class="left z-depth-5">
+						<img class="showInPC" src="/images/logo.png" alt="">
+						<span class="showInSP">Menu</span>
+					</h1>
+					<i class="material-icons close showInSP right">close</i>
+				</div>
+				<ul class="right menu-links">
 					<li><a href="#">about us</a></li>
 					<li><a href="#">products</a></li>
 					<li><a href="#">samples</a></li>

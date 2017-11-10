@@ -36,6 +36,9 @@ $color-Theme-complement-dark: #1faa00;
 	-o-transition: $t;
 	transition: $t;
 }
+@mixin removeFromContainer(){
+	margin: 0 -16px;
+}
 body{
 	line-height: 1.5;
 }
@@ -329,7 +332,21 @@ footer{
 .grid-item--width3 { width:  60%; }
 
 $slider-dot-size: 5px;
+
+.showInSP{
+	display:none;
+}
+.showInPC{
+	display:block;
+}
 @media screen and (max-width: 480px) {
+
+.showInSP{
+	display:block;
+}
+.showInPC{
+	display:none;
+}
 	header{
 		padding-top: 4rem;
 		.sp-toolbar{
@@ -409,10 +426,48 @@ $slider-dot-size: 5px;
 		z-index: 24;
    		height: 100vh;
    		width: 80%;
-   		background-color:#fff;
+   		background-color:$color-Theme;
+   		-webkit-box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+    	box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
 		@include transitionFunction(right 500ms ease);
 		&.active{
 			right: 0;
+		}
+		nav{
+			background-color:#fff;
+
+			.sp-menu{
+				overflow: hidden;
+				position: relative;
+				padding: 0 16px;
+			    @include removeFromContainer();
+				h1{
+					margin: 0;
+					text-align: center;
+					color: $color-Theme;
+				    text-align: left;
+				    font-size: 1.5rem;
+				    margin-top: 9px;
+				    padding-left: 0;
+				    width: auto;
+					box-shadow: none!important;
+				}
+				.close{
+					color: $color-Theme;
+				}
+			}
+			.menu-links{
+				float: none!important;
+				 @include removeFromContainer();
+			}
+			ul{
+				li{
+					width: 100%;
+				    background-color:  $color-Theme;
+				    float: none;
+			        border-bottom: 1px solid #97292e;
+				}
+			}
 		}
 	}
 	main{

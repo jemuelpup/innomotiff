@@ -219,7 +219,19 @@ footer {
 .grid-item--width3 {
   width: 60%; }
 
+.showInSP {
+  display: none; }
+
+.showInPC {
+  display: block; }
+
 @media screen and (max-width: 480px) {
+  .showInSP {
+    display: block; }
+
+  .showInPC {
+    display: none; }
+
   header {
     padding-top: 4rem; }
     header .sp-toolbar {
@@ -278,7 +290,9 @@ footer {
     z-index: 24;
     height: 100vh;
     width: 80%;
-    background-color: #fff;
+    background-color: #ee6e73;
+    -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
     -webkit-transition: right 500ms ease;
     -moz-transition: right 500ms ease;
     -ms-transition: right 500ms ease;
@@ -286,6 +300,33 @@ footer {
     transition: right 500ms ease; }
     aside.active {
       right: 0; }
+    aside nav {
+      background-color: #fff; }
+      aside nav .sp-menu {
+        overflow: hidden;
+        position: relative;
+        padding: 0 16px;
+        margin: 0 -16px; }
+        aside nav .sp-menu h1 {
+          margin: 0;
+          text-align: center;
+          color: #ee6e73;
+          text-align: left;
+          font-size: 1.5rem;
+          margin-top: 9px;
+          padding-left: 0;
+          width: auto;
+          box-shadow: none !important; }
+        aside nav .sp-menu .close {
+          color: #ee6e73; }
+      aside nav .menu-links {
+        float: none !important;
+        margin: 0 -16px; }
+      aside nav ul li {
+        width: 100%;
+        background-color: #ee6e73;
+        float: none;
+        border-bottom: 1px solid #97292e; }
 
   main h2 {
     font-size: 2rem;

@@ -48,6 +48,9 @@ $(document).ready(function(){
   $(".menu").click(function(){
   	$('body>aside').addClass("active");	
   });
+  $(".close").click(function(){
+  	$('body>aside').removeClass("active");	
+  });
   
 
   var colWidth = ($('.grid').width()/6)-(6*4);
@@ -92,6 +95,7 @@ $(document).ready(function(){
 	$(window).resize(function(){
   	setSliderHeight(smallestHeightElementInSlider);
   });
+
   // this returns the element
 	function getSmallestHeightInImgArray(a){
 		console.log(a);
